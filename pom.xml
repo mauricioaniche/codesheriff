@@ -52,10 +52,7 @@
             <artifactId>ck</artifactId>
             <version>0.6.3</version>
         </dependency>
-
-
     </dependencies>
-
 
     <build>
         <plugins>
@@ -76,6 +73,30 @@
                     <includes>
                         <include>**/*Test.java</include>
                     </includes>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.5</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <excludes>
+                    </excludes>
                 </configuration>
             </plugin>
         </plugins>
