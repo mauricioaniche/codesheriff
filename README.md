@@ -1,5 +1,9 @@
 # CodeSheriff
 
+[![Build Status](https://travis-ci.org/mauricioaniche/codesheriff.svg?branch=master)](https://travis-ci.org/mauricioaniche/codesheriff)
+[![Code Coverage](https://codecov.io/github/mauricioaniche/codesheriff/coverage.svg)](https://codecov.io/gh/mauricioaniche/codesheriff)
+
+
 CodeSheriff is a simple library that helps you in writing JUnit tests 
 that check the quality of your code.
 
