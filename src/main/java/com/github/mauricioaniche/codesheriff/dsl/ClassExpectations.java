@@ -3,6 +3,7 @@ package com.github.mauricioaniche.codesheriff.dsl;
 import com.github.mauricioaniche.codesheriff.dsl.comparisons.ComparisonOperator;
 import com.github.mauricioaniche.codesheriff.expectations.clazz.ClassComplexity;
 import com.github.mauricioaniche.codesheriff.expectations.clazz.ClassCoupling;
+import com.github.mauricioaniche.codesheriff.expectations.clazz.ClassLOC;
 import com.github.mauricioaniche.codesheriff.expectations.clazz.ClassNumberOfMethods;
 
 public class ClassExpectations {
@@ -24,6 +25,11 @@ public class ClassExpectations {
 
     public ClassExpectations numberOfMethods(ComparisonOperator operator) {
         sheriff.addExpectation(new ClassNumberOfMethods(operator));
+        return this;
+    }
+
+    public ClassExpectations linesOfCode(ComparisonOperator operator) {
+        sheriff.addExpectation(new ClassLOC(operator));
         return this;
     }
 }

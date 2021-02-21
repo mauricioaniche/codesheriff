@@ -48,4 +48,42 @@ public class CodeSheriffE2ETest {
                 .hasSize(1)
                 .allMatch(s -> s.contains("Fixture2Class1"));
     }
+
+    @Test
+    void fixture3MethodLoc() {
+        CodeSheriff sheriff = new CodeSheriff();
+
+        sheriff.thatEnsures()
+                .methods()
+                .inClassesOfPackage("fixture.f3")
+                .have()
+                .linesOfCode(ofLessThan(7));
+
+        SheriffReport report = new SheriffRunner()
+                .run(Arrays.asList(sheriff));
+
+        assertThat(report.containsViolations()).isTrue();
+        assertThat(report.getViolations())
+                .hasSize(1)
+                .allMatch(s -> s.contains("m2/0"));
+    }
+
+    @Test
+    void fixture4ClassLoc() {
+        CodeSheriff sheriff = new CodeSheriff();
+
+        sheriff.thatEnsures()
+                .classes()
+                .inClassesOfPackage("fixture.f4")
+                .have()
+                .linesOfCode(ofLessThan(100));
+
+        SheriffReport report = new SheriffRunner()
+                .run(Arrays.asList(sheriff));
+
+        assertThat(report.containsViolations()).isTrue();
+        assertThat(report.getViolations())
+                .hasSize(1)
+                .allMatch(s -> s.contains("Fixture4Class1"));
+    }
 }
