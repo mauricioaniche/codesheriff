@@ -1,6 +1,7 @@
 package com.github.mauricioaniche.codesheriff.dsl;
 
 import com.github.mauricioaniche.codesheriff.filters.method.MethodInPackage;
+import com.github.mauricioaniche.codesheriff.filters.method.MethodNameStartsWith;
 
 
 public class MethodFilters {
@@ -13,6 +14,11 @@ public class MethodFilters {
 
     public MethodFilters inClassesOfPackage(String packageName) {
         sheriff.addFilter(new MethodInPackage(packageName));
+        return this;
+    }
+
+    public MethodFilters withNamesStartingWith(String firstCharsOfMethodName) {
+        sheriff.addFilter(new MethodNameStartsWith(firstCharsOfMethodName));
         return this;
     }
 

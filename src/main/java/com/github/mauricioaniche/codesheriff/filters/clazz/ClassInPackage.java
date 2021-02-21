@@ -1,6 +1,7 @@
 package com.github.mauricioaniche.codesheriff.filters.clazz;
 
 import com.github.mauricioaniche.ck.CKClassResult;
+import com.github.mauricioaniche.codesheriff.util.CKUtil;
 
 public class ClassInPackage implements ClassFilter {
     private final String packageName;
@@ -11,6 +12,7 @@ public class ClassInPackage implements ClassFilter {
 
     @Override
     public boolean accept(CKClassResult clazz) {
-        return clazz.getClassName().contains(packageName);
+        String packageNameFromFullName = CKUtil.packageAndClassName(clazz.getClassName())[0];
+        return packageNameFromFullName.contains(this.packageName);
     }
 }

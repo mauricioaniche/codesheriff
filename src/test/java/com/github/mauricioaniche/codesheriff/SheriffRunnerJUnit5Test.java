@@ -38,7 +38,7 @@ public class SheriffRunnerJUnit5Test extends CodeSheriffJUnit5 {
 
         sheriff.thatEnsures()
                 .classes()
-                .inClassesOfPackage("fixture.f1")
+                .inPackage("fixture.f1")
                 .have()
                 .numberOfMethods(ofLessThan(10));
 

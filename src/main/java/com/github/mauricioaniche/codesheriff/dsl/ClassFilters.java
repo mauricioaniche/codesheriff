@@ -11,7 +11,7 @@ public class ClassFilters {
         this.sheriff = sheriff;
     }
 
-    public ClassFilters inClassesOfPackage(String packageName) {
+    public ClassFilters inPackage(String packageName) {
         sheriff.addFilter(new ClassInPackage(packageName));
         return this;
     }
