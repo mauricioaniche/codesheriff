@@ -1,9 +1,9 @@
 package com.github.mauricioaniche.codesheriff.dsl;
 
 import com.github.mauricioaniche.codesheriff.dsl.comparisons.ComparisonOperator;
-import com.github.mauricioaniche.codesheriff.expectations.ClassComplexity;
-import com.github.mauricioaniche.codesheriff.expectations.ClassCoupling;
-import com.github.mauricioaniche.codesheriff.expectations.ClassNumberOfMethods;
+import com.github.mauricioaniche.codesheriff.expectations.clazz.ClassComplexity;
+import com.github.mauricioaniche.codesheriff.expectations.clazz.ClassCoupling;
+import com.github.mauricioaniche.codesheriff.expectations.clazz.ClassNumberOfMethods;
 
 public class ClassExpectations {
     private final CodeSheriff sheriff;

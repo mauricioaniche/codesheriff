@@ -30,7 +30,7 @@ public class CodeSheriffJUnit {
             }
         }).collect(Collectors.toList());
 
-        SheriffReport report = new SheriffRunner("/Users/mauricioaniche/workspace/codesheriff/src/test/java/")
+        SheriffReport report = new SheriffRunner()
                 .run(sheriffs);
 
         if(report.containsViolations()) {

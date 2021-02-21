@@ -1,8 +1,8 @@
 package com.github.mauricioaniche.codesheriff.dsl;
 
 import com.github.mauricioaniche.codesheriff.dsl.comparisons.ComparisonOperator;
-import com.github.mauricioaniche.codesheriff.expectations.MethodComplexity;
-import com.github.mauricioaniche.codesheriff.expectations.MethodCoupling;
+import com.github.mauricioaniche.codesheriff.expectations.method.MethodComplexity;
+import com.github.mauricioaniche.codesheriff.expectations.method.MethodCoupling;
 
 public class MethodExpectations {
     private final CodeSheriff sheriff;

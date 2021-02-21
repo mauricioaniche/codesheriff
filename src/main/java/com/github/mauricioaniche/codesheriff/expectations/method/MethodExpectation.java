@@ -1,4 +1,4 @@
-package com.github.mauricioaniche.codesheriff.expectations;
+package com.github.mauricioaniche.codesheriff.expectations.method;
 
 import com.github.mauricioaniche.ck.CKClassResult;
 import com.github.mauricioaniche.ck.CKMethodResult;

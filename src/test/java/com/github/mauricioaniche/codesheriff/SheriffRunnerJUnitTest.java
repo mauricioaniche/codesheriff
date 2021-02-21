@@ -2,9 +2,11 @@ package com.github.mauricioaniche.codesheriff;
 
 import com.github.mauricioaniche.codesheriff.dsl.CodeSheriff;
 import com.github.mauricioaniche.codesheriff.junit.CodeSheriffJUnit;
+import org.junit.jupiter.api.Disabled;
 
 import static com.github.mauricioaniche.codesheriff.dsl.comparisons.Comparisons.ofLessThan;
 
+@Disabled
 public class SheriffRunnerJUnitTest extends CodeSheriffJUnit {
 
     CodeSheriff complexity() {

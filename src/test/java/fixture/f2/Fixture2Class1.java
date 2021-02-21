@@ -1,6 +1,6 @@
-package fixture.f1;
+package fixture.f2;
 
-public class Fixture2 {
+public class Fixture2Class1 {
 
     void m1() { }
     void m2() { }
