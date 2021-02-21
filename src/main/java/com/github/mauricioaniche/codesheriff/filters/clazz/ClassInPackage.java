@@ -1,4 +1,4 @@
-package com.github.mauricioaniche.codesheriff.filters;
+package com.github.mauricioaniche.codesheriff.filters.clazz;
 
 import com.github.mauricioaniche.ck.CKClassResult;
 

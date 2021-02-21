@@ -1,6 +1,6 @@
 package com.github.mauricioaniche.codesheriff.dsl;
 
-import com.github.mauricioaniche.codesheriff.filters.MethodInPackage;
+import com.github.mauricioaniche.codesheriff.filters.method.MethodInPackage;
 
 
 public class MethodFilters {

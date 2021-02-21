@@ -1,6 +1,6 @@
 package com.github.mauricioaniche.codesheriff.dsl;
 
-import com.github.mauricioaniche.codesheriff.filters.ClassInPackage;
+import com.github.mauricioaniche.codesheriff.filters.clazz.ClassInPackage;
 
 
 public class ClassFilters {

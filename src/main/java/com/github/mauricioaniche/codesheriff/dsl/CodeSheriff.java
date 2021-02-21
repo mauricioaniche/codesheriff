@@ -4,8 +4,8 @@ import com.github.mauricioaniche.ck.CKClassResult;
 import com.github.mauricioaniche.ck.CKMethodResult;
 import com.github.mauricioaniche.codesheriff.expectations.clazz.ClassExpectation;
 import com.github.mauricioaniche.codesheriff.expectations.method.MethodExpectation;
-import com.github.mauricioaniche.codesheriff.filters.ClassFilter;
-import com.github.mauricioaniche.codesheriff.filters.MethodFilter;
+import com.github.mauricioaniche.codesheriff.filters.clazz.ClassFilter;
+import com.github.mauricioaniche.codesheriff.filters.method.MethodFilter;
 import com.github.mauricioaniche.codesheriff.runner.SheriffReport;
 
 import java.util.LinkedList;
