@@ -38,6 +38,7 @@ public class CodeSheriff {
     }
 
     private boolean acceptsMethod(CKMethodResult method, CKClassResult clazz) {
+        if(methodFilters.isEmpty()) return true;
         return methodFilters.stream().allMatch(mf -> mf.accept(method, clazz));
     }
 
@@ -48,6 +49,7 @@ public class CodeSheriff {
     }
 
     private boolean acceptsClass(CKClassResult clazz) {
+        if(classFilters.isEmpty()) return true;
         return classFilters.stream().allMatch(mf -> mf.accept(clazz));
     }
 
