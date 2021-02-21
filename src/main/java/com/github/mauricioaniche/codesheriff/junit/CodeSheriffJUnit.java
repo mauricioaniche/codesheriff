@@ -1,6 +1,6 @@
 package com.github.mauricioaniche.codesheriff.junit;
 
-import com.github.mauricioaniche.codesheriff.CodeSheriff;
+import com.github.mauricioaniche.codesheriff.dsl.CodeSheriff;
 import com.github.mauricioaniche.codesheriff.runner.SheriffReport;
 import com.github.mauricioaniche.codesheriff.runner.SheriffRunner;
 import org.junit.jupiter.api.Assertions;
@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import org.reflections.Reflections;
 import org.reflections.scanners.MethodParameterScanner;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;
 import java.util.Set;

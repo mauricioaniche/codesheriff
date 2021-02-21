@@ -1,4 +1,4 @@
-package com.github.mauricioaniche.codesheriff;
+package com.github.mauricioaniche.codesheriff.dsl;
 
 public class ClassOrMethodSelection {
     private final CodeSheriff sheriff;
@@ -10,4 +10,6 @@ public class ClassOrMethodSelection {
     public MethodFilters methods() {
         return new MethodFilters(sheriff);
     }
+
+    public ClassFilters classes() { return new ClassFilters(sheriff); }
 }

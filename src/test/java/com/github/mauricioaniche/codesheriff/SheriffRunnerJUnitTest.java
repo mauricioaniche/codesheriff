@@ -1,6 +1,9 @@
 package com.github.mauricioaniche.codesheriff;
 
+import com.github.mauricioaniche.codesheriff.dsl.CodeSheriff;
 import com.github.mauricioaniche.codesheriff.junit.CodeSheriffJUnit;
+
+import static com.github.mauricioaniche.codesheriff.dsl.comparisons.Comparisons.ofLessThan;
 
 public class SheriffRunnerJUnitTest extends CodeSheriffJUnit {
 
@@ -11,7 +14,7 @@ public class SheriffRunnerJUnitTest extends CodeSheriffJUnit {
                 .methods()
                 .inClassesOfPackage("fixture.f1")
                 .have()
-                .complexityOfLessThan(2);
+                .complexity(ofLessThan(2));
 
         return sheriff;
     }
@@ -23,7 +26,19 @@ public class SheriffRunnerJUnitTest extends CodeSheriffJUnit {
                 .methods()
                 .inClassesOfPackage("fixture.f1")
                 .have()
-                .couplingOfLessThan(2);
+                .coupling(ofLessThan(2));
+
+        return sheriff;
+    }
+
+    CodeSheriff totalMethodsInAClass() {
+        CodeSheriff sheriff = new CodeSheriff();
+
+        sheriff.thatEnsures()
+                .classes()
+                .inClassesOfPackage("fixture.f1")
+                .have()
+                .numberOfMethods(ofLessThan(10));
 
         return sheriff;
     }

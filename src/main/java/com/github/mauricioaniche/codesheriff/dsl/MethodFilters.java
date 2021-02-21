@@ -1,4 +1,4 @@
-package com.github.mauricioaniche.codesheriff;
+package com.github.mauricioaniche.codesheriff.dsl;
 
 import com.github.mauricioaniche.codesheriff.filters.MethodInPackage;
 
