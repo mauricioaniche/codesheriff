@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class CodeSheriffJUnit {
+public class CodeSheriffJUnit5 {
 
     @Test
     void sherrifs() {
