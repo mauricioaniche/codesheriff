@@ -10,6 +10,9 @@ CodeSheriff is highly flexible and lets you define the quality rules through
 a very simple DSL. No more complicated configurations in complicated code
 quality tools. Just write a test!
 
+This framework was highly inspired by ArchUnit. If you want to write unit tests 
+to check architectural conformance, check that framework! 
+
 *Note that this is still just a prototype and is not yet battle tested. Help me out here!*
 
 ## The CodeSheriff API
@@ -60,6 +63,14 @@ less than 100 lines of code.
 This class is a JUnit 5 test class. Just run it. If no rules are broken in your
 code, then, the test passes. If a rule is broken, CodeSheriff will list you all
 the classes and methods that break a rule.
+
+## How does it work?
+
+CodeSheriff builds the AST of your entire source code and collect code metrics.
+This is done by my other library, CK. 
+
+This means that checking the rules may take a while depending on the size of
+your project.
 
 ## Available rules
 
