@@ -40,7 +40,7 @@ public class SheriffRunnerJUnitTest extends CodeSheriffJUnit5 {
 
         sheriff.thatEnsures()
                 .classes()
-                .inClassesOfPackage("a.b.c")
+                .inPackage("a.b.c")
                 .have()
                 .linesOfCode(ofLessThan(100));
 
