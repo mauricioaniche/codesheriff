@@ -11,7 +11,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import java.util.Arrays;
 
-import static com.github.mauricioaniche.codesheriff.dsl.comparisons.Comparisons.ofLessThan;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -44,7 +43,7 @@ public class MethodNameStartsWithTest {
                 .inClassesOfPackage("fixture.f5")
                 .withNamesStartingWith("abc")
                 .have()
-                .linesOfCode(ofLessThan(2));
+                .linesOfCode(m -> m < 2);
 
         SheriffReport report = new SheriffRunner()
                 .run(Arrays.asList(sheriff));

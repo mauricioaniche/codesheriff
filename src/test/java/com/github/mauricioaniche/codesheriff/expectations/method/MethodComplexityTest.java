@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static com.github.mauricioaniche.codesheriff.dsl.comparisons.Comparisons.ofLessThan;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MethodComplexityTest {
@@ -20,7 +19,7 @@ public class MethodComplexityTest {
                 .methods()
                 .inClassesOfPackage("fixture.f1")
                 .have()
-                .complexity(ofLessThan(2));
+                .complexity(m -> m < 2);
 
         SheriffReport report = new SheriffRunner()
                 .run(Arrays.asList(sheriff));

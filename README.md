@@ -5,7 +5,6 @@
 
 CodeSheriff is a simple library that helps you in writing JUnit tests 
 that check the quality of your code.
-
 For example, CodeSheriff may fail because you have methods in your code that 
 have more than X lines of code, or that have complexity greater than Y.
 
@@ -13,7 +12,7 @@ CodeSheriff is highly flexible and lets you define the quality rules through
 a very simple DSL. No more complicated configurations in complicated code
 quality tools. Just write a test!
 
-This framework was highly inspired by ArchUnit. If you want to write unit tests 
+This framework was highly inspired by [ArchUnit](https://github.com/TNG/ArchUnit). If you want to write unit tests 
 to check architectural conformance, check that framework! 
 
 *Note that this is still just a prototype and is not yet battle tested. Help me out here!*
@@ -33,7 +32,7 @@ public class SheriffRunnerJUnitTest extends CodeSheriffJUnit5 {
                 .methods()
                 .inClassesOfPackage("a.b.c")
                 .have()
-                .complexity(ofLessThan(10));
+                .complexity(m -> m < 10);
 
         return sheriff;
     }
@@ -45,7 +44,7 @@ public class SheriffRunnerJUnitTest extends CodeSheriffJUnit5 {
                 .classes()
                 .inPackage("a.b.c")
                 .have()
-                .linesOfCode(ofLessThan(100));
+                .linesOfCode(m -> m < 100);
 
         return sheriff;
     }
@@ -70,7 +69,7 @@ the classes and methods that break a rule.
 ## How does it work?
 
 CodeSheriff builds the AST of your entire source code and collect code metrics.
-This is done by my other library, CK. 
+This is done by my other library, [CK](https://github.com/mauricioaniche/ck). 
 
 This means that checking the rules may take a while depending on the size of
 your project.

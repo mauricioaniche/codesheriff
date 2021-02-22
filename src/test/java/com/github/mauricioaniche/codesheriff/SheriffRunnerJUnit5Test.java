@@ -2,46 +2,34 @@ package com.github.mauricioaniche.codesheriff;
 
 import com.github.mauricioaniche.codesheriff.dsl.CodeSheriff;
 import com.github.mauricioaniche.codesheriff.junit.CodeSheriffJUnit5;
-import org.junit.jupiter.api.Disabled;
 
-import static com.github.mauricioaniche.codesheriff.dsl.comparisons.Comparisons.ofLessThan;
-
-@Disabled
+// two random sheriffs just to ensure the integration works
 public class SheriffRunnerJUnit5Test extends CodeSheriffJUnit5 {
 
-    CodeSheriff complexity() {
-        CodeSheriff sheriff = new CodeSheriff();
 
-        sheriff.thatEnsures()
-                .methods()
-                .inClassesOfPackage("fixture.f1")
-                .have()
-                .complexity(ofLessThan(2));
-
-        return sheriff;
-    }
-
-    CodeSheriff coupling() {
-        CodeSheriff sheriff = new CodeSheriff();
-
-        sheriff.thatEnsures()
-                .methods()
-                .inClassesOfPackage("fixture.f1")
-                .have()
-                .coupling(ofLessThan(2));
-
-        return sheriff;
-    }
-
-    CodeSheriff totalMethodsInAClass() {
+    CodeSheriff fixture4ClassLoc() {
         CodeSheriff sheriff = new CodeSheriff();
 
         sheriff.thatEnsures()
                 .classes()
-                .inPackage("fixture.f1")
+                .inPackage("fixture.f4")
                 .have()
-                .numberOfMethods(ofLessThan(10));
+                .linesOfCode(m -> m < 200);
+
+        return sheriff;
+
+    }
+
+    CodeSheriff fixture3MethodLoc() {
+        CodeSheriff sheriff = new CodeSheriff();
+
+        sheriff.thatEnsures()
+                .methods()
+                .inClassesOfPackage("fixture.f3")
+                .have()
+                .linesOfCode(m -> m < 100);
 
         return sheriff;
     }
+
 }

@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static com.github.mauricioaniche.codesheriff.dsl.comparisons.Comparisons.ofLessThan;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MethodLOCTest {
@@ -21,7 +20,7 @@ public class MethodLOCTest {
                 .methods()
                 .inClassesOfPackage("fixture.f3")
                 .have()
-                .linesOfCode(ofLessThan(7));
+                .linesOfCode(m -> m < 7);
 
         SheriffReport report = new SheriffRunner()
                 .run(Arrays.asList(sheriff));

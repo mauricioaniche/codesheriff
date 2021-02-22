@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static com.github.mauricioaniche.codesheriff.dsl.comparisons.Comparisons.ofLessThan;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ClassNumberOfMethodsTest {
@@ -20,7 +19,7 @@ public class ClassNumberOfMethodsTest {
                 .classes()
                 .inPackage("fixture.f2")
                 .have()
-                .numberOfMethods(ofLessThan(10));
+                .numberOfMethods(m -> m < 10);
 
         SheriffReport report = new SheriffRunner()
                 .run(Arrays.asList(sheriff));
