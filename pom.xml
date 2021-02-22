@@ -4,7 +4,7 @@
 
     <groupId>com.github.mauricioaniche</groupId>
     <artifactId>codesheriff</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1</version>
 
     <name>Codesheriff</name>
     <url>http://github.com/mauricioaniche/codesheriff</url>
@@ -35,7 +35,7 @@
         <url>http://github.com/mauricioaniche/codesheriff</url>
         <connection>scm:git:git://github.com/mauricioaniche/codesheriff.git</connection>
         <developerConnection>scm:git:git@github.com:mauricioaniche/codesheriff.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>codesheriff-0.1</tag>
     </scm>
 
     <dependencies>
