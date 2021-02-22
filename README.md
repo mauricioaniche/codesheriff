@@ -23,6 +23,9 @@ The best way to understand CodeSheriff is by means of examples. See the
 test class below:
 
 ```java
+import com.github.mauricioaniche.codesheriff.dsl.CodeSheriff;
+import com.github.mauricioaniche.codesheriff.junit.CodeSheriffJUnit5;
+
 public class SheriffRunnerJUnitTest extends CodeSheriffJUnit5 {
 
     CodeSheriff complexity() {
@@ -65,6 +68,19 @@ less than 100 lines of code.
 This class is a JUnit 5 test class. Just run it. If no rules are broken in your
 code, then, the test passes. If a rule is broken, CodeSheriff will list you all
 the classes and methods that break a rule.
+
+## How to import it in my project?
+
+Simply add it to your Maven or Gradle file:
+
+```xml
+<dependency>
+    <groupId>com.github.mauricioaniche</groupId>
+    <artifactId>codesheriff</artifactId>
+    <version>0.1.0</version>
+    <scope>test</scope>
+</dependency>
+```
 
 ## How does it work?
 
