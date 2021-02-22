@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 public class CodeSheriffJUnit5 {
 
     @Test
-    void sherrifs() {
+    void sheriffs() {
         Reflections reflections = new Reflections(this.getClass(), new MethodParameterScanner());
         Set<Method> methods = reflections.getMethodsReturn(CodeSheriff.class);
 
