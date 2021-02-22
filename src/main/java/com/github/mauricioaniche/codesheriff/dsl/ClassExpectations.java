@@ -1,6 +1,5 @@
 package com.github.mauricioaniche.codesheriff.dsl;
 
-import com.github.mauricioaniche.codesheriff.dsl.comparisons.ComparisonOperator;
 import com.github.mauricioaniche.codesheriff.expectations.clazz.ClassComplexity;
 import com.github.mauricioaniche.codesheriff.expectations.clazz.ClassCoupling;
 import com.github.mauricioaniche.codesheriff.expectations.clazz.ClassLOC;

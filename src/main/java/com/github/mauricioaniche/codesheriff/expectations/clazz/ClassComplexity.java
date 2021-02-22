@@ -1,7 +1,7 @@
 package com.github.mauricioaniche.codesheriff.expectations.clazz;
 
 import com.github.mauricioaniche.ck.CKClassResult;
-import com.github.mauricioaniche.codesheriff.dsl.comparisons.ComparisonOperator;
+import com.github.mauricioaniche.codesheriff.dsl.ComparisonOperator;
 
 public class ClassComplexity extends DefaultClassExpectation {
 

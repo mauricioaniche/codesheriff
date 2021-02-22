@@ -1,7 +1,7 @@
 package com.github.mauricioaniche.codesheriff.expectations.clazz;
 
 import com.github.mauricioaniche.ck.CKClassResult;
-import com.github.mauricioaniche.codesheriff.dsl.comparisons.ComparisonOperator;
+import com.github.mauricioaniche.codesheriff.dsl.ComparisonOperator;
 import com.github.mauricioaniche.codesheriff.runner.SheriffReport;
 import org.junit.jupiter.api.Test;
 

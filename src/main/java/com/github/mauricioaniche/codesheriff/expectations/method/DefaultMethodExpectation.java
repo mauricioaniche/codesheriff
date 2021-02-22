@@ -2,7 +2,7 @@ package com.github.mauricioaniche.codesheriff.expectations.method;
 
 import com.github.mauricioaniche.ck.CKClassResult;
 import com.github.mauricioaniche.ck.CKMethodResult;
-import com.github.mauricioaniche.codesheriff.dsl.comparisons.ComparisonOperator;
+import com.github.mauricioaniche.codesheriff.dsl.ComparisonOperator;
 import com.github.mauricioaniche.codesheriff.runner.SheriffReport;
 
 public abstract class DefaultMethodExpectation implements MethodExpectation {
