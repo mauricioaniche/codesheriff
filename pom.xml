@@ -4,8 +4,11 @@
 
     <groupId>com.github.mauricioaniche</groupId>
     <artifactId>codesheriff</artifactId>
-    <version>0.3-SNAPSHOT</version>
+    <version>0.1-SNAPSHOT</version>
 
+    <name>Codesheriff</name>
+    <url>http://github.com/mauricioaniche/codesheriff</url>
+    <description>A library that lets you specify your quality rules via JUnit tests</description>
 
     <licenses>
         <license>
