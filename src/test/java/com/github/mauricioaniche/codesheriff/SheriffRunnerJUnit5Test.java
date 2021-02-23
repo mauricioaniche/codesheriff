@@ -6,7 +6,6 @@ import com.github.mauricioaniche.codesheriff.junit.CodeSheriffJUnit5;
 // two random sheriffs just to ensure the integration works
 public class SheriffRunnerJUnit5Test extends CodeSheriffJUnit5 {
 
-
     CodeSheriff fixture4ClassLoc() {
         CodeSheriff sheriff = new CodeSheriff();
 
@@ -20,16 +19,11 @@ public class SheriffRunnerJUnit5Test extends CodeSheriffJUnit5 {
 
     }
 
-    CodeSheriff fixture3MethodLoc() {
-        CodeSheriff sheriff = new CodeSheriff();
-
-        sheriff.thatEnsures()
-                .methods()
-                .inClassesOfPackage("fixture.f3")
-                .have()
-                .linesOfCode(m -> m < 100);
-
-        return sheriff;
-    }
+    CodeSheriff fixture3MethodLoc = new CodeSheriff()
+            .thatEnsures()
+            .methods()
+            .inClassesOfPackage("fixture.f3")
+            .have()
+            .linesOfCode(m -> m < 100);
 
 }

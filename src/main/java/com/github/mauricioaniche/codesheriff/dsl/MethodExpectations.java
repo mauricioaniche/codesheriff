@@ -12,23 +12,23 @@ public class MethodExpectations {
         this.sheriff = sheriff;
     }
 
-    public MethodExpectations complexity(ComparisonOperator operator) {
+    public CodeSheriff complexity(ComparisonOperator operator) {
         sheriff.addExpectation(new MethodComplexity(operator));
-        return this;
+        return sheriff;
     }
 
-    public MethodExpectations coupling(ComparisonOperator operator) {
+    public CodeSheriff coupling(ComparisonOperator operator) {
         sheriff.addExpectation(new MethodCoupling(operator));
-        return this;
+        return sheriff;
     }
 
-    public MethodExpectations linesOfCode(ComparisonOperator operator) {
+    public CodeSheriff linesOfCode(ComparisonOperator operator) {
         sheriff.addExpectation(new MethodLOC(operator));
-        return this;
+        return sheriff;
     }
 
-    public MethodExpectations numberOfDeclaredVariables(ComparisonOperator operator) {
+    public CodeSheriff numberOfDeclaredVariables(ComparisonOperator operator) {
         sheriff.addExpectation(new MethodNumberOfVariables(operator));
-        return this;
+        return sheriff;
     }
 }

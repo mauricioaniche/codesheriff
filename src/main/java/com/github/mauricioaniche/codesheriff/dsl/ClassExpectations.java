@@ -9,28 +9,28 @@ public class ClassExpectations {
         this.sheriff = sheriff;
     }
 
-    public ClassExpectations complexity(ComparisonOperator operator) {
+    public CodeSheriff complexity(ComparisonOperator operator) {
         sheriff.addExpectation(new ClassComplexity(operator));
-        return this;
+        return sheriff;
     }
 
-    public ClassExpectations coupling(ComparisonOperator operator) {
+    public CodeSheriff coupling(ComparisonOperator operator) {
         sheriff.addExpectation(new ClassCoupling(operator));
-        return this;
+        return sheriff;
     }
 
-    public ClassExpectations numberOfMethods(ComparisonOperator operator) {
+    public CodeSheriff numberOfMethods(ComparisonOperator operator) {
         sheriff.addExpectation(new ClassNumberOfMethods(operator));
-        return this;
+        return sheriff;
     }
 
-    public ClassExpectations numberOfInnerClasses(ComparisonOperator operator) {
+    public CodeSheriff numberOfInnerClasses(ComparisonOperator operator) {
         sheriff.addExpectation(new ClassNumberOfInnerClasses(operator));
-        return this;
+        return sheriff;
     }
 
-    public ClassExpectations linesOfCode(ComparisonOperator operator) {
+    public CodeSheriff linesOfCode(ComparisonOperator operator) {
         sheriff.addExpectation(new ClassLOC(operator));
-        return this;
+        return sheriff;
     }
 }

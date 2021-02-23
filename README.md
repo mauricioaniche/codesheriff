@@ -28,6 +28,7 @@ import com.github.mauricioaniche.codesheriff.junit.CodeSheriffJUnit5;
 
 public class SheriffRunnerJUnitTest extends CodeSheriffJUnit5 {
 
+    // it can be a method that returns 'CodeSheriff' ...
     CodeSheriff complexity() {
         CodeSheriff sheriff = new CodeSheriff();
 
@@ -40,17 +41,13 @@ public class SheriffRunnerJUnitTest extends CodeSheriffJUnit5 {
         return sheriff;
     }
 
-    CodeSheriff loc() {
-        CodeSheriff sheriff = new CodeSheriff();
-
-        sheriff.thatEnsures()
-                .classes()
-                .inPackage("a.b.c")
-                .have()
-                .linesOfCode(m -> m < 100);
-
-        return sheriff;
-    }
+    // ... or a field!
+    CodeSheriff loc = new CodeSheriff()
+            .thatEnsures()
+            .methods()
+            .inClassesOfPackage("fixture.f3")
+            .have()
+            .linesOfCode(m -> m < 100);
 
 }
 ```
