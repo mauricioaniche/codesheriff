@@ -1,9 +1,6 @@
 package com.github.mauricioaniche.codesheriff.dsl;
 
-import com.github.mauricioaniche.codesheriff.expectations.clazz.ClassComplexity;
-import com.github.mauricioaniche.codesheriff.expectations.clazz.ClassCoupling;
-import com.github.mauricioaniche.codesheriff.expectations.clazz.ClassLOC;
-import com.github.mauricioaniche.codesheriff.expectations.clazz.ClassNumberOfMethods;
+import com.github.mauricioaniche.codesheriff.expectations.clazz.*;
 
 public class ClassExpectations {
     private final CodeSheriff sheriff;
@@ -24,6 +21,11 @@ public class ClassExpectations {
 
     public ClassExpectations numberOfMethods(ComparisonOperator operator) {
         sheriff.addExpectation(new ClassNumberOfMethods(operator));
+        return this;
+    }
+
+    public ClassExpectations numberOfInnerClasses(ComparisonOperator operator) {
+        sheriff.addExpectation(new ClassNumberOfInnerClasses(operator));
         return this;
     }
 
