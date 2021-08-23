@@ -35,6 +35,7 @@ public class SheriffRunnerJUnitTest extends CodeSheriffJUnit5 {
         sheriff.thatEnsures()
                 .methods()
                 .inClassesOfPackage("a.b.c")
+                .withExceptionOfClass("Abc")
                 .have()
                 .complexity(m -> m < 10);
 
@@ -46,6 +47,7 @@ public class SheriffRunnerJUnitTest extends CodeSheriffJUnit5 {
             .thatEnsures()
             .methods()
             .inClassesOfPackage("fixture.f3")
+            .withExceptionOfMethod("abc")
             .have()
             .linesOfCode(m -> m < 100);
 
